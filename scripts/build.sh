@@ -5,8 +5,6 @@ set -e
 PROJECT_PATH="$(pwd)"
 
 cd $PROJECT_PATH
-mkdir magento
-cd magento
 
 /usr/local/bin/composer install --no-dev --no-progress
 chmod +x bin/magento

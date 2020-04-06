@@ -13,7 +13,7 @@ set('keep_releases', 3);
 
 
 // Magento root
-set('magento_root', 'magento');
+set('magento_root', '');
 
 // Configuration
 set(

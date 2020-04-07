@@ -6,12 +6,12 @@ PROJECT_PATH="$(pwd)"
 
 cd $PROJECT_PATH
 
-/usr/local/bin/composer install --no-dev --no-progress
-chmod +x bin/magento
-
 @echo off
   echo.>"app/etc/vendor_path.php"
 echo "<?php return './vendor';" >> app/etc/vendor_path.php
+
+/usr/local/bin/composer install --no-dev --no-progress
+chmod +x bin/magento
 
 mysqladmin -h mysql -u root -pmagento status
 

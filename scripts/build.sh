@@ -9,6 +9,10 @@ cd $PROJECT_PATH
 /usr/local/bin/composer install --no-dev --no-progress
 chmod +x bin/magento
 
+@echo off
+  echo.>"app/etc/vendor_path.php"
+echo "<?php return './vendor';" >> app/etc/vendor_path.php
+
 mysqladmin -h mysql -u root -pmagento status
 
 if [ $INPUT_ELASTICSUITE = 1 ]

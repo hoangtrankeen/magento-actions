@@ -6,8 +6,8 @@ PROJECT_PATH="$(pwd)"
 
 cd $PROJECT_PATH
 
-@echo off
-  echo.>"app/etc/vendor_path.php"
+
+touch app/etc/vendor_path.php
 echo "<?php return './vendor';" >> app/etc/vendor_path.php
 
 /usr/local/bin/composer install --no-dev --no-progress

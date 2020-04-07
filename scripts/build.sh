@@ -10,6 +10,7 @@ cd $PROJECT_PATH
 touch app/etc/vendor_path.php
 echo "<?php return './vendor';" >> app/etc/vendor_path.php
 
+/usr/local/bin/composer update
 /usr/local/bin/composer install --no-dev --no-progress
 chmod +x bin/magento
 

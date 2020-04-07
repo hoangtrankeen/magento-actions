@@ -31,7 +31,7 @@ ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null  staging "mkdir 
 
 
 
-tar cfz "$BUCKET_COMMIT" deployer/scripts/staging magento
+tar cfz "$BUCKET_COMMIT" deployer/scripts/staging ./
 scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null  "$BUCKET_COMMIT" staging:$HOST_DEPLOY_PATH_BUCKET
 
 
